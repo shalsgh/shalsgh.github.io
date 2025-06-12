@@ -67,8 +67,12 @@
             align-self: stretch;
         }
 
-        action-button:last-child:nth-child(even) {
-            grid-column: span 2;
+        action-button:nth-child(odd) {
+            grid-column: span 1;
+        }
+        
+        action-button:nth-child(even) {
+            grid-column: span 1;
         }
 
         .action-button {

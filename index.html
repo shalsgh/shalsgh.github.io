@@ -3,297 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minho Noh</title>
-    <meta name="description" content="Software Engineer Portfolio">
+    <title>Minho Noh (노민호)</title>
+    <meta property="og:description" content="Resume, Github and more">
+</head>
+
+<body>
+    <main>
+        <div class="intro">
+            <div class="name">
+                <h1>Minho Noh</h1>
+                <span>노민호</span>
+            </div>
+            <p class="desc-large">
+                AI-Powered Mobile/Web Developer
+            </p>
+            <ul class="desc-large">
+                <li>Leveraging AI tools for fast and accurate development</li>
+                <li>Cross-platform mobile/web development experience</li>
+                <li>Continuous learning with sensitivity to latest tech trends</li>
+            </ul>
+            <div class="other-infos">
+                <div class="other-info email">
+                    <span>📧</span>
+                    <a href="mailto:shalsgh0@gmail.com">shalsgh0@gmail.com</a>
+                </div>
+                <div class="other-info">
+                    <span>📍</span>
+                    <span>Seoul, Korea</span>
+                </div>
+            </div>
+        </div>
+        <div class="action-button-grid">
+            <action-button to="https://github.com/shalsgh">
+                Github
+            </action-button>
+            <action-button to="https://shalsgh0.blogspot.com/">
+                Blog
+            </action-button>
+            <action-button to="/resume.pdf">
+                Resume
+            </action-button>
+        </div>
+    </main>
     
     <style>
-        * {
+        .intro {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            align-self: stretch;
+        }
+
+        .action-button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.625rem;
+            align-self: stretch;
+        }
+
+        action-button:last-child:nth-child(odd) {
+            grid-column: span 2;
+        }
+
+        .action-button {
+            color: black;
+            background-color: white;
+            border-radius: 9999px;
+            border: 1px solid #E3E3E3;
+            text-decoration: none;
+            display: flex;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            flex: 1 0 0;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: normal;
+            transition: all 0.2s ease;
+        }
+
+        .action-button:hover {
+            background-color: #f8f9fa;
+            border-color: #d0d7de;
+            transform: translateY(-1px);
+        }
+
+        .desc-large {
+            font-size: 0.825rem;
+        }
+
+        ul {
             margin: 0;
             padding: 0;
+            list-style-position: inside;
+        }
+
+        .name {
+            display: flex;
+            align-items: baseline;
+            gap: 0.65rem;
+            margin: 0.125rem 0;
+        }
+
+        .other-infos {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .other-info {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.75rem;
+            margin: 0.25rem 0;
+        }
+
+        p {
+            margin: 0.25rem 0;
+        }
+
+        a {
+            color: black;
+        }
+
+        h1 {
+            font-weight: 600;
+            display: inline;
+            margin: 0.5rem 0;
+        }
+
+        main {
+            display: flex;
+            padding: 3rem 1rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            width: 100%;
+            max-width: 768px;
             box-sizing: border-box;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fafafa;
-            min-height: 100vh;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 40px 20px 100px 20px;
-        }
-
-        .container {
-            max-width: 500px;
             width: 100%;
-            text-align: center;
+            height: 100vh;
+            background: #F6F6F6;
+            margin: 0;
+            line-height: 125%;
+            letter-spacing: -0.04em;
+            font-family: Interop, "Apple SD Gothic Neo", "Noto Sans KR", "Noto Sans CJK KR", 나눔고딕, "Nanum Gothic", "Malgun Gothic", "맑은 고딕", apple-system, BlinkMacSystemFont;
         }
 
-        .profile-section {
-            margin-bottom: 40px;
-        }
-
-        .name {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #1a1a1a;
-        }
-
-        .name-ko {
-            font-size: 1.1rem;
-            color: #666;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-
-        .role {
-            font-size: 0.9rem;
-            color: #444;
-            margin-bottom: 25px;
-            line-height: 1.4;
-        }
-
-        .highlights {
-            text-align: left;
-            margin-bottom: 40px;
-        }
-
-        .highlight-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 6px;
-            font-size: 0.85rem;
-            color: #555;
-        }
-
-        .highlight-item::before {
-            content: "•";
-            margin-right: 12px;
-            color: #888;
-            flex-shrink: 0;
-        }
-
-        .contact-info {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-            font-size: 0.9rem;
-            color: #666;
-            flex-wrap: wrap;
-        }
-
-        .contact-info .email {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .contact-info .location {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 20px;
-            background: white;
-            border: 1px solid #e1e5e9;
-            border-radius: 12px;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.2s ease;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-        }
-
-        .contact-link:hover {
-            background: #f8f9fa;
-            border-color: #d0d7de;
-            transform: translateY(-1px);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-        }
-
-        .contact-link .left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .contact-link .icon {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .contact-link .text {
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .contact-link .arrow {
-            color: #8b949e;
-            font-size: 1.2rem;
-        }
-
-        .github-icon {
-            width: 22px;
-            height: 22px;
-            fill: currentColor;
-        }
-
-        .blog-icon {
-            width: 22px;
-            height: 22px;
-            fill: none;
-        }
-
-        .resume-icon {
-            width: 22px;
-            height: 22px;
-            fill: currentColor;
-        }
-
-        @media (max-width: 600px) {
+        @media (min-width: 768px) {
             body {
-                padding: 30px 15px 120px 15px;
-            }
-            
-            .name {
-                font-size: 2.2rem;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 8px;
+                display: flex;
+                justify-content: center;
             }
         }
 
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
+        @font-face {
+            font-family: 'Interop';
+            src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Medium.woff2') format('woff2'),
+                url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: block;
         }
 
-        @keyframes fadeIn {
-            from { 
-                opacity: 0; 
-                transform: translateY(30px); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
-            }
+        @font-face {
+            font-family: 'Interop';
+            src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff2') format('woff2'),
+                url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        @font-face {
+            font-family: 'Interop';
+            src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-SemiBold.woff2') format('woff2'),
+                url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-SemiBold.woff') format('woff');
+            font-weight: 600;
+            font-style: normal;
+            font-display: block;
         }
     </style>
-</head>
-<body>
-    <div class="container fade-in">
-        <div class="profile-section">
-            <h1 class="name">Minho Noh</h1>
-            <p class="name-ko">노민호</p>
-            <p class="role">Software Engineer(Mobile/Web Front-end) / Product Manager</p>
-            
-            <div class="highlights">
-                <div class="highlight-item">AI 도구를 활용한 빠르고 정확한 개발</div>
-                <div class="highlight-item">모바일/웹 크로스 플랫폼 개발 경험</div>
-                <div class="highlight-item">최신 기술 트렌드에 민감한 지속적 학습</div>
-            </div>
-        </div>
-
-        <div class="contact-info">
-            <div class="email">
-                <span>📧</span>
-                <span>shalsgh0@gmail.com</span>
-            </div>
-            <div class="location">
-                <span>📍</span>
-                <span>Seoul, Korea</span>
-            </div>
-        </div>
-
-        <div class="contact-links">
-            <a href="https://github.com/shalsgh" class="contact-link" target="_blank">
-                <div class="left">
-                    <div class="icon">
-                        <svg class="github-icon" viewBox="0 0 24 24">
-                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/>
-                        </svg>
-                    </div>
-                    <span class="text">Github</span>
-                </div>
-                <span class="arrow">→</span>
-            </a>
-
-            <a href="https://shalsgh0.blogspot.com/" class="contact-link" target="_blank">
-                <div class="left">
-                    <div class="icon">
-                        <img src="Blogger_icon.svg" width="22" height="22" alt="Blog" style="object-fit: contain; border-radius: 4px;">
-                    </div>
-                    <span class="text">Blog</span>
-                </div>
-                <span class="arrow">→</span>
-            </a>
-
-            <a href="/resume.pdf" class="contact-link" target="_blank">
-                <div class="left">
-                    <div class="icon">
-                        <svg class="resume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14,2 14,8 20,8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                            <polyline points="10,9 9,9 8,9"/>
-                        </svg>
-                    </div>
-                    <span class="text">Resume</span>
-                </div>
-                <span class="arrow">→</span>
-            </a>
-        </div>
-    </div>
-
+    
     <script>
-        // 버튼 클릭 효과
-        document.querySelectorAll('.contact-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                // 실제 링크가 설정되지 않은 경우 기본 동작 방지
-                if (this.href.includes('/resume.pdf')) {
-                    e.preventDefault();
-                    alert('실제 링크로 변경해주세요!');
+        class ActionButtonElement extends HTMLElement {
+            connectedCallback() {
+                const link = this.getAttribute("to");
+                let iconSrc = "";
+                
+                // 버튼 텍스트에 따라 아이콘 결정
+                const buttonText = this.innerHTML.trim();
+                if (buttonText === "Github") {
+                    iconSrc = `<svg style="height: 1.25rem;" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/>
+                    </svg>`;
+                } else if (buttonText === "Blog") {
+                    iconSrc = `<img src="Blogger_icon.svg" style="height: 1.25rem; border-radius: 3px;">`;
+                } else if (buttonText === "Resume") {
+                    iconSrc = `<svg style="height: 1.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10,9 9,9 8,9"/>
+                    </svg>`;
                 }
-            });
-
-            // 호버 효과 강화
-            link.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-2px)';
-            });
-
-            link.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // 부드러운 페이드인 효과
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(() => {
-                document.querySelector('.container').style.opacity = '1';
-            }, 100);
-        });
+                
+                this.innerHTML = `<a href="${link}" class="action-button">
+                    ${iconSrc}
+                    <span style="width: 100%;">${buttonText}</span>
+                    →
+                </a>`;
+                
+                // Resume 링크 클릭 시 알림
+                if (buttonText === "Resume") {
+                    this.querySelector('a').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        alert('실제 링크로 변경해주세요!');
+                    });
+                }
+            }
+        }
+        customElements.define("action-button", ActionButtonElement);
     </script>
 </body>
 </html>

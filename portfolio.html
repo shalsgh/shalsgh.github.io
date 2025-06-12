@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Minho Noh</title>
+    <meta property="og:description" content="Minho Noh's Portfolio - AI-Powered Mobile/Web Development Projects">
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <a href="index.html" class="back-button">← Back</a>
+            <h1>Portfolio</h1>
+            <p>AI를 활용한 모바일/웹 개발 프로젝트들</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-image mobile">📱</div>
+                </div>
+                <div class="project-info">
+                    <h3>FoodieAI</h3>
+                    <p class="project-type">React Native • AI Integration</p>
+                    <p class="project-desc">AI 기반 음식 추천 및 영양 분석 앱. 사진 촬영만으로 칼로리와 영양소를 분석하고 개인 맞춤 식단을 제안합니다.</p>
+                    <div class="tech-tags">
+                        <span>React Native</span>
+                        <span>TensorFlow</span>
+                        <span>Firebase</span>
+                        <span>OpenAI API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-image web">💻</div>
+                </div>
+                <div class="project-info">
+                    <h3>SmartScheduler</h3>
+                    <p class="project-type">Next.js • Web Application</p>
+                    <p class="project-desc">AI 어시스턴트가 스케줄을 자동으로 최적화해주는 웹 앱. 자연어 입력으로 일정 등록하고 충돌 방지 및 시간 배분을 AI가 관리합니다.</p>
+                    <div class="tech-tags">
+                        <span>Next.js</span>
+                        <span>TypeScript</span>
+                        <span>Prisma</span>
+                        <span>Claude API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-image mobile">📱</div>
+                </div>
+                <div class="project-info">
+                    <h3>VoiceNote</h3>
+                    <p class="project-type">Flutter • Cross-platform</p>
+                    <p class="project-desc">음성을 텍스트로 변환하고 AI가 자동으로 요약 및 카테고리 분류해주는 노트 앱. 회의록이나 강의 내용을 쉽게 정리할 수 있습니다.</p>
+                    <div class="tech-tags">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Speech-to-Text</span>
+                        <span>GPT-4</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-image web">🌐</div>
+                </div>
+                <div class="project-info">
+                    <h3>CodeReviewer</h3>
+                    <p class="project-type">Vue.js • Developer Tool</p>
+                    <p class="project-desc">GitHub 연동으로 Pull Request를 AI가 자동 리뷰해주는 웹 서비스. 코드 품질 향상과 버그 예방을 위한 개발자 도구입니다.</p>
+                    <div class="tech-tags">
+                        <span>Vue.js</span>
+                        <span>Node.js</span>
+                        <span>GitHub API</span>
+                        <span>CodeT5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-image mobile">📱</div>
+                </div>
+                <div class="project-info">
+                    <h3>FitnessAI</h3>
+                    <p class="project-type">React Native • Health & Fitness</p>
+                    <p class="project-desc">개인의 체력 수준과 목표에 맞춘 AI 맞춤형 운동 프로그램 제공. 실시간 자세 교정과 운동 효과 분석 기능을 포함합니다.</p>
+                    <div class="tech-tags">
+                        <span>React Native</span>
+                        <span>TensorFlow Lite</span>
+                        <span>HealthKit</span>
+                        <span>ML Kit</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-image web">🛒</div>
+                </div>
+                <div class="project-info">
+                    <h3>ShopSmart</h3>
+                    <p class="project-type">React • E-commerce</p>
+                    <p class="project-desc">AI 추천 엔진을 탑재한 전자상거래 플랫폼. 사용자 행동 패턴 분석으로 개인화된 상품 추천과 동적 가격 최적화를 제공합니다.</p>
+                    <div class="tech-tags">
+                        <span>React</span>
+                        <span>Redux</span>
+                        <span>AWS</span>
+                        <span>Recommendation AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background: #F6F6F6;
+            margin: 0;
+            line-height: 125%;
+            letter-spacing: -0.04em;
+            font-family: Interop, "Apple SD Gothic Neo", "Noto Sans KR", "Noto Sans CJK KR", 나눔고딕, "Nanum Gothic", "Malgun Gothic", "맑은 고딕", apple-system, BlinkMacSystemFont;
+        }
+
+        main {
+            display: flex;
+            padding: 2rem 1rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        .back-button {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            align-self: flex-start;
+            padding: 0.5rem 0;
+            transition: color 0.2s ease;
+        }
+
+        .back-button:hover {
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0;
+            color: #1a1a1a;
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #E3E3E3;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: #ccc;
+        }
+
+        .project-image {
+            margin-bottom: 1rem;
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .placeholder-image {
+            font-size: 3rem;
+            opacity: 0.6;
+        }
+
+        .mobile {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .web {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .project-info h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+            color: #1a1a1a;
+        }
+
+        .project-type {
+            font-size: 0.8rem;
+            color: #666;
+            margin: 0 0 0.75rem 0;
+            font-weight: 500;
+        }
+
+        .project-desc {
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.5;
+            margin: 0 0 1rem 0;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tags span {
+            background: #f1f3f4;
+            color: #5f6368;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            main {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        @font-face {
+            font-family: 'Interop';
+            src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Medium.woff2') format('woff2'),
+                url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: block;
+        }
+
+        @font-face {
+            font-family: 'Interop';
+            src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff2') format('woff2'),
+                url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        @font-face {
+            font-family: 'Interop';
+            src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-SemiBold.woff2') format('woff2'),
+                url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-SemiBold.woff') format('woff');
+            font-weight: 600;
+            font-style: normal;
+            font-display: block;
+        }
+    </style>
+
+    <script>
+        // 프로젝트 카드 클릭 이벤트
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const projectTitle = this.querySelector('h3').textContent;
+                alert(`${projectTitle} 프로젝트의 상세 정보는 곧 추가될 예정입니다!`);
+            });
+        });
+
+        // 부드러운 애니메이션
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
